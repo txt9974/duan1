@@ -65,7 +65,7 @@
                     </div>
                     <div class="text-center"><input type="submit" value="Login" class="btn_1 full-width" name="dangnhap"></div>
                     </form>
-                    <div>Do not have an account? <a href="account.php">Sign up</a> now</div>
+                    <div>Do not have an account? <a href="index.php?act=dangky">Sign up</a> now</div>
                     <?php } ?>
                 </div>
                 <!-- /form_container -->

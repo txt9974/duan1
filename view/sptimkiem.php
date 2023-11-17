@@ -15,7 +15,7 @@
 							<div class="grid_item">
 								<figure>
 									<span class="ribbon off">New</span>
-									<a href="product-detail-1.html">
+									<a href="index.php?act=chitietsp&idsp=".'.$id.'>
 										<img class="img-fluid lazy" src="img/products/product_placeholder_square_medium.jpg"
 											data-src="'.$hinhpath.'" alt="" width="400" height="400">
 									</a>

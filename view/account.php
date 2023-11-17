@@ -62,7 +62,7 @@
 							
 						</div>
 						<div class="text-center"><input type="submit" value="Register" class="btn_1 full-width" name="dangky"></div>
-						<div>Do you already have an account? <a href="dangnhap.php">Sign in</a> now</div>
+						<div>Do you already have an account? <a href="index.php?act=dangnhap">Sign in</a> now</div>
                 
 
 	</main>

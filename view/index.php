@@ -34,7 +34,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
         case "chitietsp": 
             if (isset($_GET["idsp"]) && $_GET["idsp"] > 0) {
                 $id = $_GET["idsp"];
-                $onesp = loadone_sach($idsach);
+                $onesp = loadone_sach($id);
                 include "chitietsp.php";
             }
             break;

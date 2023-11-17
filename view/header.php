@@ -191,7 +191,7 @@
 												$listdanhmuc = loadall_loaisach();
 												foreach($listdanhmuc as $dm) {
 													extract($dm);
-													echo '<li><span><a href="index.php?act=chitietsp">'.$name.'</a></span></li>';
+													echo '<li><span><a href="index.php?act=sptimkiem">'.$name.'</a></span></li>';
 												}
 											?>
 											<!-- <li><span><a href="#">Men</a></span></li>
