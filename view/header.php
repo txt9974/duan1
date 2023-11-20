@@ -72,8 +72,8 @@
 								<a href="#" class="open_close" id="close_in"><i class="ti-close"></i></a>
 							</div>
 							<ul>
-								<li class="submenu">
-									<a href="#0" class="show-submenu">TRANG CHỦ</a>
+								<li class="">
+									<a href="index.php">TRANG CHỦ</a>
 									<!-- <ul>
 										<li><a href="index.html">Slider</a></li>
 										<li><a href="index-2.html">Video Background</a></li>
@@ -237,7 +237,7 @@
 										</ul>
 										<div class="total_drop">
 											<div class="clearfix"><strong>Total</strong><span>$200.00</span></div>
-											<a href="cart.html" class="btn_1 outline">View Cart</a><a href="checkout.html" class="btn_1">Checkout</a>
+											<a href="cart.php" class="btn_1 outline">View Cart</a><a href="checkout.html" class="btn_1">Checkout</a>
 										</div>
 									</div>
 								</div>
@@ -273,13 +273,13 @@
 												<a href="account.html"><i class="ti-package"></i>My Orders</a>
 											</li>
 											<li>
-												<a href="account.html"><i class="ti-user"></i>My Profile</a>
+												<a href="index.php?act=dangnhap"><i class="ti-user"></i>My Profile</a>
 											</li>
 											<li>
 												<a href="help.html"><i class="ti-help-alt"></i>Help and Faq</a>
 											</li>
 											<li>
-                                    			<a href="index.php?act=thoat">Thoát</a>
+                                    			<a href="index.php?act=thoat"><i class="ti-logout-alt"></i>Đăng xuất</a>
                                 			</li>
 										</ul>
 									</div>

@@ -35,7 +35,7 @@
                                 </li>
                                 <?php if($role==0){ ?>
                                 <li>
-                                    <a href="admin/index.php">Đăng nhập Admin</a>
+                                    <a href="../admin/index.php">Đăng nhập Admin</a>
                                 </li>
                                 <?php } ?>
                                 <li>
