@@ -5,7 +5,7 @@ include "../model/loaisach.php";
 include "../model/sach.php";
 include "../model/binhluan.php";
 include "../model/taikhoan.php";
-
+include "../model/cart.php";
 
 if (isset($_GET["act"])) {
     $act = $_GET["act"];
@@ -161,7 +161,12 @@ if (isset($_GET["act"])) {
             include("donhang/list.php");
             break;
         case 'thongke':
+            $listthongke = loadall_thongke();
             include("thongke/list.php");
+            break;
+        case 'bieudo':
+            $listthongke = loadall_thongke();
+            include "thongke/bieudo.php";
             break;
     }
 } else {

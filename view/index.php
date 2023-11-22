@@ -45,8 +45,22 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 $password = $_POST['password'];
                 $address = $_POST['address'];
                 $tel = $_POST['tel'];
-                insert_taikhoan($username, $email, $password, $address, $tel);
-                $thongbao="Đã đăng kí thành công. Vui lòng đăng nhập";
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    if(empty($_POST["username"])) {
+                        echo "<span style='color:red;'>Error: Tên đăng nhập cần phải điền</span>";
+                    }
+                    if (empty($_POST["email"])) {
+                        echo "<span style='color:red;'>Error: Email bắt buộc phải nhập.</span>";
+                    } else {
+                        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                            echo "<span style='color:red;'>Error: Email nhập chưa đúng.</span>";
+                        }
+                    }
+                }else {
+                    insert_taikhoan($username, $email, $password, $address, $tel);
+                    $thongbao="Đã đăng kí thành công. Vui lòng đăng nhập";
+                }
+                
             }
             include "account.php";
             break;
@@ -81,6 +95,10 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
         case 'thoat':
             session_unset();
             include "home.php";
+            break;
+        
+        case 'checkout':
+            include "thanhtoan.php";
             break;
 
         default:

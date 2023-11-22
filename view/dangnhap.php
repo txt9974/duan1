@@ -10,7 +10,7 @@
 					<li>Page active</li>
 				</ul>
 		</div>
-		<h1>Sign In or Create an Account</h1>
+		<h1>Sign In</h1>
 	</div>
     
     <div class="col-xl-6 col-lg-6 col-md-8">

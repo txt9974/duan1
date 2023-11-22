@@ -237,7 +237,7 @@
 										</ul>
 										<div class="total_drop">
 											<div class="clearfix"><strong>Total</strong><span>$200.00</span></div>
-											<a href="cart.php" class="btn_1 outline">View Cart</a><a href="checkout.html" class="btn_1">Checkout</a>
+											<a href="cart.php" class="btn_1 outline">View Cart</a><a href="index.php?act=checkout" class="btn_1">Checkout</a>
 										</div>
 									</div>
 								</div>

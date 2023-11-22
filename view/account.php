@@ -10,7 +10,7 @@
 					<li>Page active</li>
 				</ul>
 		</div>
-		<h1>Sign In or Create an Account</h1>
+		<h1>Create an Account</h1>
 	</div>
 	<!-- /page_header -->
 			

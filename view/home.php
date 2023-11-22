@@ -116,7 +116,7 @@
 									<span class="ribbon off">New</span>
 									<a href="'.$linksp.'">
 										<img class="img-fluid lazy" src="img/products/product_placeholder_square_medium.jpg"
-											data-src="'. $hinhpath . '" alt="" width="400" height="400">
+											data-src="'. $hinhpath . '" alt="" width="400px" height="400px">
 									</a>
 									<div data-countdown="2019/05/15" class="countdown"></div>
 								</figure>
