@@ -204,41 +204,54 @@
 						</nav>
 					</div>
 					<div class="col-xl-6 col-lg-7 col-md-6 d-none d-md-block">
-						<div class="custom-search-input">
-							<form action="index.php?act=sptimkiem" method="post">
-								<input type="text" name="kyw" placeholder="Tìm kiếm tại đây">
-								<button type="submit" name="timkiem"><i class="header-icon_search_custom"></i></button>
-							</form>
+							<div class="custom-search-input">
+								<form action="index.php?act=sptimkiem" method="post">
+									<input type="text" name="kyw" placeholder="Tìm kiếm tại đây">
+									<button type="submit" name="timkiem"><i class="header-icon_search_custom"></i></button>
+								</form>
+
+							</div>
 						</div>
-					</div>
-					<div class="col-xl-3 col-lg-2 col-md-3">
-						<ul class="top_tools">
-							<li>
-								<div class="dropdown dropdown-cart">
-									<a href="cart.html" class="cart_bt"><strong>2</strong></a>
-									<div class="dropdown-menu">
-										<ul>
-											<li>
-												<a href="product-detail-1.html">
-													<figure><img src="img/products/product_placeholder_square_small.jpg" data-src="img/products/shoes/thumb/1.jpg" alt="" width="50" height="50" class="lazy"></figure>
-													<strong><span>1x Armor Air x Fear</span>$90.00</strong>
-												</a>
-												<a href="#0" class="action"><i class="ti-trash"></i></a>
-											</li>
-											<li>
-												<a href="product-detail-1.html">
-													<figure><img src="img/products/product_placeholder_square_small.jpg" data-src="img/products/shoes/thumb/2.jpg" alt="" width="50" height="50" class="lazy"></figure>
-													<strong><span>1x Armor Okwahn II</span>$110.00</strong>
-												</a>
-												<a href="0.html" class="action"><i class="ti-trash"></i></a>
-											</li>
-										</ul>
-										<div class="total_drop">
-											<div class="clearfix"><strong>Total</strong><span>$200.00</span></div>
-											<a href="cart.php" class="btn_1 outline">View Cart</a><a href="index.php?act=checkout" class="btn_1">Checkout</a>
+						<div class="col-xl-3 col-lg-2 col-md-3">
+							<ul class="top_tools">
+								<li>
+									<div class="dropdown dropdown-cart">
+										<?php
+										$tong = 0;
+										$i = 0;
+										?>
+										<a href="index.php?act=giohang" class="cart_bt"></a>
+										<div class="dropdown-menu">
+											<ul>
+												<?php
+												if (isset($_SESSION['mycart']) && ($_SESSION['mycart'])) {
+													
+													foreach ($_SESSION['mycart'] as $cart) {
+														$hinh = $img_path . $cart[2];
+														$ttien = $cart[3] * $cart[4];
+														$tong += $ttien;
+	
+														$xoasp = '<a href="index.php?idcart=' . $i . '" class="action"><i class="ti-trash"></i></a>';
+														echo '<li>
+														<a href="product-detail-1.html">
+															<figure><img src="'.$hinh.'" data-src="'.$hinh.'" alt="" width="50" height="50" class="lazy"></figure>
+															<strong><span>'.$cart[1].'</span>$'.$cart[3].'</strong>
+														</a>
+														'.$xoasp.'
+													</li>';
+													$i+=1;	
+													} 
+												}else{
+
+												}
+												?>
+											</ul>
+											<div class="total_drop">
+												<div class="clearfix"><strong>Total</strong><span>$<?=$tong?></span></div>
+												<a href="index.php?act=giohang" class="btn_1 outline">View Cart</a><a href="index.php?act=donhang" class="btn_1">Checkout</a>
+											</div>
 										</div>
 									</div>
-								</div>
 								<!-- /dropdown-cart-->
 							</li>
 							<li>
@@ -271,7 +284,7 @@
 											</li>
 											
 											<li>
-												<a href="index.php?act=dangnhap"><i class="ti-user"></i>My Profile</a>
+												<a href="index.php?act=account"><i class="ti-user"></i>Account Settings</a>
 											</li>
 											<li>
 												<a href="help.html"><i class="ti-help-alt"></i>Help and Faq</a>

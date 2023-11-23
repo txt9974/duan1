@@ -1,69 +1,59 @@
+<?php
+if (isset($taikhoan) && ($taikhoan)) {
+	extract($taikhoan);
+}
+?>
+<main class="bg_gray">
 
-	<main class="bg_gray">
-		
 	<div class="container margin_30">
-		<div class="page_header">
-			<div class="breadcrumbs">
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Category</a></li>
-					<li>Page active</li>
-				</ul>
-		</div>
-		<h1>Create an Account</h1>
-	</div>
-	<!-- /page_header -->
-			
-			<form action="index.php?act=dangky" method="post">
-			<div class="col-xl-6 col-lg-6 col-md-8">
-				<div class="box_account">
-					<h3 class="new_client">New Client</h3> <small class="float-right pt-2">* Required Fields</small>
-					<div class="form_container">
-						<div class="form-group" >
-							<input type="text" class="form-control" name="username" id="username" value="" placeholder="Username*" required>
-						</div>
-						<div class="form-group">
-							<input type="email" class="form-control" name="email" id="email_2" placeholder="Email*" required>
-						</div>
-						<div class="form-group">
-							<input type="password" class="form-control" name="password" id="password_2" value="" placeholder="Password*" required>
-						</div>
-						
-						
-						<div class="private box">
-							<div class="row no-gutters">
-								<div class="col-12">
-									<div class="form-group">
-										<input type="text" class="form-control" name="address" placeholder="Full Address*" required>
-									</div>
-								</div>
-							</div>
-							<!-- /row -->
-									<div class="form-group">
-										<input type="text" class="form-control" name="tel" placeholder="Telephone *" required>
-									</div>
-									<?php
-							if(isset($thongbao)&&($thongbao!="")){
-                        		echo $thongbao;
-                    		}
-                    
-                			?>
-								</div>
-							</div>
-							<!-- /row -->
-							
-							<hr>
-							
+		
+		<!-- /page_header -->
+		<div class="row ">
+			<form action="index.php?act=updatetaikhoan" method="post">
+				<div class="col-xl-6 col-lg-6 col-md-8">
+					<div class="box_account">
+						<h3 class="new_client">Tài khoản</h3>
+						<input type="hidden" name="id" value="<?php if (isset($id) && ($id != "")) echo $id ;?>">
+						<div class="form_container">
 							<div class="form-group">
-							<label class="container_check">Accept <a href="#0">Terms and conditions</a>
-								<input type="checkbox" required>
-								<span class="checkmark"></span>
-							</label> 
-							
+								<label >Username:</label>
+								<input type="text" class="form-control" name="username" id="username" value="<?=$username?>" >
+							</div>
+							<div class="form-group">
+							<label >Password:</label>
+								<input type="text" class="form-control" name="password" id="password_2" value="<?=$password?>">
+							</div>
+							<div class="form-group">
+							<label >Email:</label>
+								<input type="email" class="form-control" name="email" id="email_2" value="<?=$email?>">
+							</div>
+							<div class="form-group">
+							<label >Address:</label>
+								<input type="text" class="form-control" name="address" value="<?=$address?>">
+							</div><div class="form-group">
+							<label >Tel:</label>
+								<input type="text" class="form-control" name="tel" value="<?=$tel?>">
+							</div>
+								
 						</div>
-						<div class="text-center"><input type="submit" value="Register" class="btn_1 full-width" name="dangky"></div>
-						<div>Do you already have an account? <a href="index.php?act=dangnhap">Sign in</a> now</div>
-                
+						<hr>
+						<input type="submit" value="Cập nhật" name="capnhat" class="btn_1 full-width">
 
-	</main>
-	<!--/main-->
+
+
+					</div>
+					<!-- /box_account -->
+				</div>
+			</form>
+			<?php
+								if (isset($thongbao_update) && ($thongbao_update != "")) {
+									echo $thongbao_update;
+								}
+
+								?>
+		</div>
+		<!-- /row -->
+	</div>
+	<!-- /container -->
+</main>
+<!--/main-->
