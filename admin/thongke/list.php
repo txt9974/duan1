@@ -4,12 +4,12 @@
     <table class="table">
     <thead>
         <tr>
-            <th scope="col">Categories ID</th>
-            <th scope="col">Categories Name</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Max Price</th>
-            <th scope="col">Min Price</th>
-            <th scope="col">AVG Price</th>
+            <th scope="col">Mã sách</th>
+            <th scope="col">Thể loại sách</th>
+            <th scope="col">Số lượng</th>
+            <th scope="col">Giá cao nhất</th>
+            <th scope="col">Giá thấp nhất</th>
+            <th scope="col">Giá trung bình</th>
         </tr>
     </thead>
             <?php

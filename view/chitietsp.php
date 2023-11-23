@@ -90,7 +90,7 @@ $hinhpath = $img_path . $img;
 								<div class="price_main"><span class="new_price" style="color: red">Giá: $<?php echo $price ?></span></div>
 							</div>
 							<div class="col-lg-5 col-md-6">
-								<div class="btn_add_to_cart"><a href="#0" class="btn_1">Thêm vào giỏ hàng</a></div>
+								<div class="btn_add_to_cart"><a href="index.php?act=giohang" class="btn_1">Thêm vào giỏ hàng</a></div>
 							</div>
 						</div>
 					</div>

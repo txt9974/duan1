@@ -274,8 +274,20 @@
 											<a href="index.php?act=dangky" class="btn_1">Sign Up</a>
 											<div class="divider"><span>OR</span></div>
 											<a href="index.php?act=dangnhap" class="btn_1">Sign In</a>
-										<?php } ?>
+											
+											<?php } ?>
+										
 										<ul>
+										<?php 
+											if(isset($_SESSION['username'])){
+												extract($_SESSION['username']);
+										?>
+											<?php if($role==0){ ?>
+                                			<li>
+                                    			<a href="../admin/index.php" ><i class="ti-admin"></i>Đăng nhập Admin</a>
+                                			</li>
+											<?php } ?>
+											<?php } ?>
 											<li>
 												<a href="track-order.html"><i class="ti-truck"></i>Track your Order</a>
 											</li>

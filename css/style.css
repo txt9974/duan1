@@ -1280,6 +1280,9 @@
 .ti-logout-alt:before {
     content: "\e682"
 }
+.ti-admin:before {
+    content: "\e642"
+}
 
 .ti-headphone-alt:before {
     content: "\e719"

@@ -1,5 +1,5 @@
 <?php
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['username'])) {
 	echo '<script type="text/javascript">alert("Bạn cần đăng nhập để vào thanh toán.");</script>';
 	echo '<script type="text/javascript">window.location.href = "./index.php";</script>';
 }
@@ -25,20 +25,19 @@ if (!isset($_SESSION['user'])) {
 					<div class="tab-content checkout">
 						<div class="tab-pane fade show active" id="tab_1" role="tabpanel" aria-labelledby="tab_1">
 							<?php
-							if (isset($_SESSION['user']) && ($_SESSION['user'])) {
+							if (isset($_SESSION['username']) && ($_SESSION['username'])) {
 								echo '
 									<div class="form-group">
-									<input type="text" class="form-control" value="' . $_SESSION['user']['username'] . '">
+									<input type="text" class="form-control" value="' . $_SESSION['username']['username'] . '">
 									</div>
 									<div class="form-group">
-										<input type="email" class="form-control" value="' . $_SESSION['user']['email'] . '">
-									</div>
-									<hr>
-									<div class="form-group">
-										<input type="text" class="form-control" value="' . $_SESSION['user']['address'] . '">
+										<input type="email" class="form-control" value="' . $_SESSION['username']['email'] . '">
 									</div>
 									<div class="form-group">
-										<input type="text" class="form-control" value="' . $_SESSION['user']['tel'] . '">
+										<input type="text" class="form-control" value="' . $_SESSION['username']['address'] . '">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" value="' . $_SESSION['username']['tel'] . '">
 									</div>';
 							}
 							?>
