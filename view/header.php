@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-
-
 <!-- Mirrored from www.ansonika.com/allaia/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Nov 2023 09:45:41 GMT -->
 <head>
     <meta charset="utf-8">
@@ -187,18 +184,19 @@
 									</span>
 									<div id="menu">
 										<ul>
+											<li>
 											<?php
 												$listdanhmuc = loadall_loaisach();
 												foreach($listdanhmuc as $dm) {
 													extract($dm);
-													echo '<li><span><a href="index.php?act=sptimkiem">'.$name.'</a></span></li>';
+													echo '<li>
+														<span>
+															<a href="index.php?act=sptimkiem">'.$name.'</a>
+														</span>
+													</li>';
 												}
 											?>
-											<!-- <li><span><a href="#">Men</a></span></li>
-											<li><span><a href="#">Women</a></span></li>
-											<li><span><a href="#">Boys</a></span></li>
-											<li><span><a href="#">Girls</a></span></li>
-											<li><span><a href="#">Customize</a></span></li> -->
+											</li>
 										</ul>
 									</div>
 								</li>
@@ -248,22 +246,21 @@
 							</li>
 							<li>
 								<div class="dropdown dropdown-access">
-									<a href="account.html" class="access_link"><span>Account</span></a>
+									<a href="" class="access_link"><span>Account</span></a>
 									<div class="dropdown-menu">
-									<?php 
-										if(isset($_SESSION['username'])){
-											extract($_SESSION['username']);
-									?>
-										<div class="form-group" id="name">
-											<h6><?=$username?></h6>
-                            			</div>
-                        			<?php
-                            			}else{
-
-                        			?>
-										<a href="index.php?act=dangky" class="btn_1">Sign Up</a>
-										<div class="divider"><span>OR</span></div>
-										<a href="index.php?act=dangnhap" class="btn_1">Sign In</a>
+										<?php 
+											if(isset($_SESSION['username'])){
+												extract($_SESSION['username']);
+										?>
+											<div class="form-group" id="name">
+												<h6><?=$username?></h6>
+											</div>
+										<?php
+											}else{
+										?>
+											<a href="index.php?act=dangky" class="btn_1">Sign Up</a>
+											<div class="divider"><span>OR</span></div>
+											<a href="index.php?act=dangnhap" class="btn_1">Sign In</a>
 										<?php } ?>
 										<ul>
 											<li>
@@ -272,6 +269,7 @@
 											<li>
 												<a href="account.html"><i class="ti-package"></i>My Orders</a>
 											</li>
+											
 											<li>
 												<a href="index.php?act=dangnhap"><i class="ti-user"></i>My Profile</a>
 											</li>

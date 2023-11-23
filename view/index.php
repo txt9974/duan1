@@ -44,23 +44,9 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 $email = $_POST['email'];
                 $password = $_POST['password'];
                 $address = $_POST['address'];
-                $tel = $_POST['tel'];
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    if(empty($_POST["username"])) {
-                        echo "<span style='color:red;'>Error: Tên đăng nhập cần phải điền</span>";
-                    }
-                    if (empty($_POST["email"])) {
-                        echo "<span style='color:red;'>Error: Email bắt buộc phải nhập.</span>";
-                    } else {
-                        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                            echo "<span style='color:red;'>Error: Email nhập chưa đúng.</span>";
-                        }
-                    }
-                }else {
-                    insert_taikhoan($username, $email, $password, $address, $tel);
-                    $thongbao="Đã đăng kí thành công. Vui lòng đăng nhập";
-                }
-                
+                $tel = $_POST['tel']; 
+                insert_taikhoan($username, $email, $password, $address, $tel);
+                $thongbao="Đã đăng kí thành công. Vui lòng đăng nhập";
             }
             include "account.php";
             break;
@@ -72,7 +58,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 $checkuser = checkuser($username, $password);
                 if(is_array($checkuser)){
                     $_SESSION['username']=$checkuser;
-                    // $thongbao="Bạn đã đăng nhập thành công";
+                    echo "<script> window.location.href='index.php';</script>";
                 }
                 else{
                     $thongbao="Tài khoản không tồn tại. Vui lòng kiểm tra hoặc đăng kí";
@@ -94,6 +80,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             break;
         case 'thoat':
             session_unset();
+            echo "<script> window.location.href='index.php';</script>";
             include "home.php";
             break;
         
