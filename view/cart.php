@@ -1,5 +1,5 @@
 <?php
-	if (!isset($_SESSION['user'])) {
+	if (!isset($_SESSION['username'])) {
 		echo '<script type="text/javascript">alert("Bạn cần đăng nhập để vào giỏ hàng.");</script>';
 		echo '<script type="text/javascript">window.location.href = "./index.php";</script>';
 	}

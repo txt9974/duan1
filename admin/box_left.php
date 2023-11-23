@@ -38,6 +38,11 @@
                                 <span>Thống Kê</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="../view/index.php" class="waves-effect">
+                                <span>Quay về trang chủ</span>
+                            </a>
+                        </li>
 
 
                     </ul>
