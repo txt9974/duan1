@@ -1,4 +1,6 @@
-<main>
+
+		
+	<main>
 		
 		<div class="container margin_30">
 			<div class="main_title">
@@ -68,3 +70,4 @@
 		<!-- /container -->
 	</main>
 	<!-- /main -->
+	

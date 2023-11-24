@@ -19,7 +19,7 @@
                     extract($taikhoan);
                     $suataikhoan = "index.php?act=suataikhoan&id=" . $id;
                     $xoataikhoan = "index.php?act=xoataikhoan&id=" . $id;
-                    if ($role == 0) {
+                    if ($role == 1) {
                         $role_name = "Admin";
                     } else {
                         $role_name = "User";

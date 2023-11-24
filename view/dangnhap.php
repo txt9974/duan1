@@ -18,41 +18,12 @@
                 <h3 class="client">Already Client</h3>
                 <div class="form_container">
                     <div class="divider"><span></span></div>
-                    <?php 
-                            if(isset($_SESSION['username'])){
-                                extract($_SESSION['username']);
-                        ?>
-                            <div class="form-group">
-                                Xin chào<br>
-                                <?=$username?>
-                            </div>
-                            <div class="form-group">
-                                <li>
-                                    <a href="index.php?act=quenmk">Quên mật khẩu</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a>
-                                </li>
-                                <?php if($role==0){ ?>
-                                <li>
-                                    <a href="../admin/index.php">Đăng nhập Admin</a>
-                                </li>
-                                <?php } ?>
-                                <li>
-                                    <a href="index.php?act=thoat">Thoát</a>
-                                </li>
-                            </div>
-
-                        <?php
-                            }else{
-
-                        ?>
                         <form action="index.php?act=dangnhap" method="post">
                     <div class="form-group">
-						<input type="text" class="form-control" name="username" id="username" value="" placeholder="Username*">
+						<input type="text" class="form-control" name="username" id="username" value="" placeholder="Username*" required oninvalid="this.setCustomValidity('Tên đăng nhập không được để trống')">
 					</div>
                     <div class="form-group">
-						<input type="password" class="form-control" name="password" id="password_2" value="" placeholder="Password*">
+						<input type="password" class="form-control" name="password" id="password_2" value="" placeholder="Password*" required oninvalid="this.setCustomValidity('Mật khẩu không được để trống')">
 					</div>
                     <div class="clearfix add_bottom_15">
                         <div class="checkboxes float-start">
@@ -66,7 +37,6 @@
                     <div class="text-center"><input type="submit" value="Login" class="btn_1 full-width" name="dangnhap"></div>
                     </form>
                     <div>Do not have an account? <a href="index.php?act=dangky">Sign up</a> now</div>
-                    <?php } ?>
                 </div>
                 <!-- /form_container -->
             </div>

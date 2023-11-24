@@ -20,7 +20,7 @@ $hinhpath = $img_path . $img;
 			<div class="col-lg-8">
 				<div class="owl-carousel owl-theme prod_pics magnific-gallery">
 					<div class="item">
-						<a href="<?php echo $hinhpath ?>" title="<?php echo $title ?>" data-effect="mfp-zoom-in"><img src="<?php echo $hinhpath ?>" alt=""></a>
+						<a href="<?php echo $hinhpath ?>" title="<?php echo $title ?>" data-effect="mfp-zoom-in"><img class ="vbook" src="<?php echo $hinhpath ?>" alt=""></a>
 					</div>
 					<!-- /item -->
 				</div>

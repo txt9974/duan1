@@ -19,9 +19,9 @@
                     <th scope="col">'.$madm.'</th>
                     <th scope="col">'.$tendm.'</th>
                     <th scope="col">'.$countsp.'</th>
-                    <th scope="col">'.$maxprice.'</th>
-                    <th scope="col">'.$minprice.'</th>
-                    <th scope="col">'.$avgprice.'</th>
+                    <th scope="col">'.$maxprice.'$</th>
+                    <th scope="col">'.$minprice.'$</th>
+                    <th scope="col">'.$avgprice.'$</th>
                 </tr>';
                 }
             ?>

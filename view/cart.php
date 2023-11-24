@@ -1,7 +1,7 @@
 <?php
 	if (!isset($_SESSION['username'])) {
 		echo '<script type="text/javascript">alert("Bạn cần đăng nhập để vào giỏ hàng.");</script>';
-		echo '<script type="text/javascript">window.location.href = "./index.php";</script>';
+		echo '<script type="text/javascript">window.location.href = "./index.php?act=dangnhap";</script>';
 	}
 ?>
 <main class="bg_gray">
@@ -103,7 +103,7 @@
 									<span>Total</span> $<?php echo $tong + 10000?>
 								</li>
 							</ul>
-							<a href="index.php?act=thanhtoan" class="btn_1 full-width cart">Proceed to Checkout</a>
+							<a href="index.php?act=donhang" class="btn_1 full-width cart">Proceed to Checkout</a>
 						</div>
 					</div>
 				</div>

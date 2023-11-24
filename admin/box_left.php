@@ -40,7 +40,7 @@
                         </li>
                         <li>
                             <a href="../view/index.php" class="waves-effect">
-                                <span>Quay về trang chủ</span>
+                                <span>Quay về trang người dùng</span>
                             </a>
                         </li>
 

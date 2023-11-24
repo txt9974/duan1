@@ -3173,6 +3173,12 @@ nav a.open_close#close_in>i:hover {
     background-color: #0044c2;
     background-color: rgba(0, 77, 218, 0.04)
 }
+.dropdown-access .dropdown-menu ul .badmin a:hover {
+    border-left: 2px solid #da0000;
+    color: #da0000 !important;
+    background-color: #c20000;
+    background-color: rgba(0, 77, 218, 0.04)
+}
 
 .search_mob_wp {
     padding: 10px 15px 0 15px;
@@ -5702,6 +5708,10 @@ input.qty2:focus {
     transform: rotate(90deg);
     opacity: 1;
     color: #444
+}
+.item .vbook{
+    height: 1000px;
+    width: 1000px;
 }
 
 .top_panel .item {

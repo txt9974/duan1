@@ -1,7 +1,7 @@
 <?php
 if (!isset($_SESSION['username'])) {
 	echo '<script type="text/javascript">alert("Bạn cần đăng nhập để vào thanh toán.");</script>';
-	echo '<script type="text/javascript">window.location.href = "./index.php";</script>';
+	echo '<script type="text/javascript">window.location.href = "./index.php?act=dangnhap";</script>';
 }
 ?>
 <main class="bg_gray">

@@ -25,7 +25,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             } else {
                 $kyw = "";
             }
-            if (isset($_Get['iddm']) && $_GET['iddm'] > 0) {
+            if (isset($_GET['iddm']) && $_GET['iddm'] > 0) {
                 $iddm = $_GET['iddm'];
             } else {
                 $iddm = 0;
@@ -34,6 +34,16 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             // print_r($dssp);
             $tendm = load_ten_loaisach($iddm);
             include "sptimkiem.php";
+            break;
+            
+            
+        case "chitietsp":
+            if (isset($_GET["idsp"]) && $_GET["idsp"] > 0) {
+                $id = $_GET["idsp"];
+                $onesp = loadone_sach($id);
+                $binhluan = loadall_binhluan($id);
+            }
+            include "chitietsp.php";
             break;
 
         case "binhluansp":
@@ -123,7 +133,24 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             include "account.php";
             break;
         case 'giohang':
-            
+            if (isset($_POST["themvaocart"]) && ($_POST["themvaocart"])) {
+                if (isset($_SESSION['username']) && ($_SESSION['username'])) {
+                    $id = $_POST["book_id"];
+                    $title = $_POST["title"];
+                    $img = $_POST["img"];
+                    $price = $_POST["price"];
+                    $soluong = 1;
+                    $bookadd = [$id, $title, $img, $price, $soluong];
+                    array_push($_SESSION['mycart'], $bookadd);
+                    echo '<script type="text/javascript">window.location.href = "./index.php";</script>';
+                } else {
+                    echo '<script type="text/javascript">alert("Bạn cần đăng nhập để thêm vào giỏ hàng.");</script>';
+                }
+            }
+            if (isset($_GET['idcart']) && ($_GET['idcart'] != "")) {
+                array_splice($_SESSION['mycart'], $_GET['idcart'], 1);
+                echo '<script type="text/javascript">window.location.href = "./index.php";</script>';
+            }
             include "cart.php";
             break;
         case 'xoagiohang':
@@ -148,24 +175,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             break;
     }
 } else {
-    if (isset($_POST["themvaocart"]) && ($_POST["themvaocart"])) {
-        if (isset($_SESSION['username']) && ($_SESSION['username'])) {
-            $id = $_POST["idbook"];
-            $title = $_POST["title"];
-            $img = $_POST["img"];
-            $price = $_POST["price"];
-            $soluong = 1;
-            $bookadd = [$id, $title, $img, $price, $soluong];
-            array_push($_SESSION['mycart'], $bookadd);
-            echo '<script type="text/javascript">window.location.href = "./index.php";</script>';
-        } else {
-            echo '<script type="text/javascript">alert("Bạn cần đăng nhập để thêm vào giỏ hàng.");</script>';
-        }
-    }
-    if (isset($_GET['idcart']) && ($_GET['idcart'] != "")) {
-        array_splice($_SESSION['mycart'], $_GET['idcart'], 1);
-        echo '<script type="text/javascript">window.location.href = "./index.php";</script>';
-    }
+    
 
     include "home.php";
 }

@@ -19,8 +19,8 @@ function insert_sach($title,$img, $author, $price, $description,$category_id){
     pdo_execute($sql);
 }
 
-function loadone_sach($id){
-    $sql = "select * from books where id = $id";
+function loadone_sach($idsach){
+    $sql = "select * from books where id = $idsach";
     $result = pdo_query_one($sql);
     return $result;
 }
